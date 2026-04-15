@@ -1,10 +1,11 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
 
 const Home = () => (
   <div>
     <Navbar />
-    <h2>RH Roofing Services</h2>
+    <Hero />
   </div>
 );
 
