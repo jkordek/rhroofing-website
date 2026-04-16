@@ -10,15 +10,70 @@ import Footer from '../components/Footer';
 const Home = () => (
   <>
     <Helmet>
-      <title>Natural Flow Roofing Services</title>
-      <meta name="description" content="Experienced roofing and UPVC services" />
-      <meta name="keywords" content="company, services, roofing, burton, burton-on-trent, roof" />
-      <link rel="canonical" href="https://naturalflowroofing" />
 
-      {/* OpenGraph for social sharing */}
-      <meta property="og:title" content="Natural Flow Roofing Services" />
-      <meta property="og:description" content="Learn more about our company and what we do." />
+      {/* Primary SEO */}
+      <title>Natural Flow Roofing Systems | Professional Roofing in Burton on Trent</title>
+      <meta
+        name="description"
+        content="Natural Flow Roofing Systems provides expert roof repairs, installations, inspections, and emergency roofing across Burton on Trent and the areas. Quality workmanship you can trust."
+      />
+      <link rel="canonical" href="https://naturalflowroofing.co.uk/" />
+
+      {/* OpenGraph (Facebook, LinkedIn, WhatsApp, Slack) */}
+      <meta property="og:title" content="Natural Flow Roofing Systems" />
+      <meta
+        property="og:description"
+        content="Professional roofing services including repairs, installations, inspections, and emergency roof work across Burton on Trent and the areas."
+      />
+      <meta property="og:url" content="https://naturalflowroofing.co.uk/" />
       <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Natural Flow Roofing Systems" />
+
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Natural Flow Roofing Systems" />
+      <meta
+        name="twitter:description"
+        content="Expert roofing services including repairs, installations, and inspections in Burton on Trent and the areas."
+      />
+      <meta name="twitter:image" content="https://naturalflowroofing.co.uk/preview.jpg" />
+
+      {/* Local Business Schema (JSON‑LD) */}
+      <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "RoofingContractor",
+            "name": "Natural Flow Roofing Systems",
+            "url": "https://naturalflowroofing.co.uk",
+            "image": "https://naturalflowroofing.co.uk/preview.jpg",
+            "description": "Professional roofing services including repairs, installations, inspections, and emergency roofing.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Burton on Trent",
+              "addressRegion": "Staffordshire",
+              "addressCountry": "UK"
+            },
+            "telephone": "YOUR_PHONE_NUMBER",
+            "areaServed": [
+              "Rushden",
+              "Northamptonshire",
+              "Wellingborough",
+              "Kettering",
+              "Bedford"
+            ],
+            "serviceType": [
+              "Roof Repairs",
+              "Roof Installations",
+              "Roof Inspections",
+              "Emergency Roofing",
+              "Flat Roofing",
+              "Gutter Repairs"
+            ]
+          }
+        `}
+      </script>
+
     </Helmet>
     <Navbar />
     <Hero />

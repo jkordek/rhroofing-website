@@ -83,7 +83,7 @@ const Services = () => {
 
               <Box
                 component="img"
-                src={service2}
+                src={service3}
                 alt="New Roof Installation"
                 sx={{
                   width: "100%",
@@ -122,7 +122,7 @@ const Services = () => {
 
               <Box
                 component="img"
-                src={service3}
+                src={service2}
                 alt="Roof Inspection"
                 sx={{
                   width: "100%",
