@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
+import AboutUs from '../components/AboutUs';
 
 const Home = () => (
   <>
@@ -20,6 +21,7 @@ const Home = () => (
     <Navbar />
     <Hero />
     <Services />
+    <AboutUs />
   </>
 );
 
