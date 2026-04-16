@@ -54,13 +54,13 @@ const Home = () => (
               "addressRegion": "Staffordshire",
               "addressCountry": "UK"
             },
-            "telephone": "YOUR_PHONE_NUMBER",
+            "telephone": "07440448919",
             "areaServed": [
-              "Rushden",
-              "Northamptonshire",
-              "Wellingborough",
-              "Kettering",
-              "Bedford"
+              "Burton on Trent",
+              "Stafforshire",
+              "Derby",
+              "Burton",
+              "Birmingham"
             ],
             "serviceType": [
               "Roof Repairs",
