@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://naturalflowroofing.co.uk/sitemap.xml

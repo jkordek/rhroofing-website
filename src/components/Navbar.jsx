@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar sx={{ bgcolor: "#2B2B2B", mt: "10px" }} position="static">
+      <AppBar sx={{ bgcolor: "#2B2B2B" }} position="static">
         <Toolbar>
           
           {/* Left */}
