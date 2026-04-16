@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Grid, Paper, Typography, Container } from "@mui/material";
 
-// Example local images (adjust paths as needed)
 import service1 from "../images/roofing1.jpeg";
 import service2 from "../images/roofing2.jpeg";
 import service3 from "../images/roofing3.jpeg";
@@ -9,27 +8,24 @@ import service3 from "../images/roofing3.jpeg";
 const Services = () => {
   return (
     <>
-      <Box sx={{ flexGrow: 1, pt: 8, pb: 16, px: 2, maxWidth: "false", mx: "auto", color: "#fff" }}>
-        {/* Main Title */}
-        <Typography
-          variant="h4"
-          align="center"
-          fontWeight="bold"
-          gutterBottom
-        >
+      <Box
+        sx={{
+          flexGrow: 1,
+          pt: 8,
+          pb: 16,
+          px: 2,
+          maxWidth: "100%",
+          color: "#fff"
+        }}
+      >
+        <Typography variant="h4" align="center" fontWeight="bold" gutterBottom>
           Our Services
         </Typography>
-
-        <Grid
-          container
-          spacing={3}
-          sx={{
-            mt: 8,
-            alignItems: "stretch",
-          }}
-        >
+        
+        <Grid container spacing={3} sx={{ mt: 8, alignItems: "stretch",  flexWrap: { xs: "wrap", md: "nowrap" }, }}>
+  
           {/* Service 1 */}
-          <Grid size={4}>
+          <Grid item xs={12} md={4}>
             <Paper
               elevation={3}
               sx={{
@@ -68,7 +64,7 @@ const Services = () => {
           </Grid>
 
           {/* Service 2 */}
-          <Grid size={4}>
+          <Grid item xs={12} md={4}>
             <Paper
               elevation={3}
               sx={{
@@ -107,7 +103,7 @@ const Services = () => {
           </Grid>
 
           {/* Service 3 */}
-          <Grid size={4}>
+          <Grid item xs={12} md={4}>
             <Paper
               elevation={3}
               sx={{
@@ -144,9 +140,12 @@ const Services = () => {
               </Typography>
             </Paper>
           </Grid>
+
         </Grid>
+
       </Box>
-      <Container sx={{ bgcolor: "#D9A842", height: "5px" }} maxWidth="false"/>
+
+      <Container sx={{ bgcolor: "#D9A842", height: "5px" }} maxWidth="false" />
     </>
   );
 };
