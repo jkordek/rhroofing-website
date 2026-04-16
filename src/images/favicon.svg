@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" fill="#000"/>
+  
+  <!-- White roof -->
+  <polyline 
+    points="18,58 40,38 62,58" 
+    fill="none" 
+    stroke="#FFFFFF" 
+    stroke-width="6" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  />
+
+  <!-- Gold roof -->
+  <polyline 
+    points="38,58 60,38 82,58" 
+    fill="none" 
+    stroke="#D9A842" 
+    stroke-width="6" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  />
+</svg>

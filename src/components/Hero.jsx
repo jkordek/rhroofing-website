@@ -38,8 +38,8 @@ const Hero = () => {
           </Typography>
 
           <Typography variant="h6" sx={{ maxWidth: 600, mx: "auto", mb: 4 }}>
-            This is your website description. Make it short, punchy, and
-            compelling so users know exactly why they should stay.
+            Reliable Roofing. Expert Craftsmanship. Lasting Protection.  
+            Your home deserves a roof built to withstand anything. We deliver quality you can trust.
           </Typography>
 
           <Button 
