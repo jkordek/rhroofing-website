@@ -59,7 +59,9 @@ const Contact = () => {
                   Call Us
                 </Typography>
                 <Typography variant="body1" color="text.secondary">
-                  01234 567890  
+                  07440 448919 
+                  <br />
+                  07404 047918
                   <br />
                   Available 7 days a week
                 </Typography>
