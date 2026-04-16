@@ -14,24 +14,30 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import logo from "../images/logo.svg";
 
 const Navbar = () => {
   const menuItems = ["Home", "Services", "Projects", "Gallery", "Contact"];
-
-  // Detect mobile screen
   const isMobile = useMediaQuery("(max-width: 768px)");
-
-  // Drawer state
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <AppBar sx={{ bgcolor: "#2B2B2B" }} position="static">
+      <AppBar sx={{ bgcolor: "#2B2B2B" }} position="sticky" elevation={4}>
         <Toolbar sx={{ display: "flex", alignItems: "center" }}>
           
           {/* Left - Logo */}
-          <Box sx={{ flex: 1 }}>
-            <Typography variant="h6">MyLogo</Typography>
+          <Box sx={{ flex: 1, display: "flex", alignItems: "center" }}>
+            <Box
+              component="img"
+              src={logo}
+              alt="Natural Flow Roofing Logo"
+              sx={{
+                height: 50,
+                width: "auto",
+                cursor: "pointer",
+              }}
+            />
           </Box>
 
           {/* Desktop Menu */}
@@ -52,9 +58,8 @@ const Navbar = () => {
             </Box>
           )}
 
-          {/* Right (empty for now) */}
+          {/* Right */}
           <Box sx={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-            {/* Mobile Hamburger */}
             {isMobile && (
               <IconButton
                 sx={{ color: "#E5E7EB" }}
