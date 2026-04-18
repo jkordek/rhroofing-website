@@ -29,7 +29,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <Typography variant="body2" align="center" sx={{ opacity: 0.8 }}>
-        © {new Date().getFullYear()} Natural Flow Roofing Services. All rights reserved.
+        © {new Date().getFullYear()} Natural Flow Roofing Systems. All rights reserved.
       </Typography>
     </Box>
   );
