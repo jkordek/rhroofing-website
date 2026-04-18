@@ -17,9 +17,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../images/logo.svg";
 
 const Navbar = () => {
-  const menuItems = ["Home", "Services", "Projects", "Gallery", "Contact"];
+  const menuItems = ["Home", "Services", "Company", "Contact"];
   const isMobile = useMediaQuery("(max-width: 768px)");
   const [open, setOpen] = useState(false);
+
+  const handleScroll = (section) => {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -51,7 +58,7 @@ const Navbar = () => {
               }}
             >
               {menuItems.map((item) => (
-                <Button sx={{ color: "#E5E7EB" }} key={item}>
+                <Button sx={{ color: "#E5E7EB" }} key={item} onClick={() => handleScroll(item)}>
                   {item}
                 </Button>
               ))}
@@ -81,7 +88,12 @@ const Navbar = () => {
           <List>
             {menuItems.map((item) => (
               <ListItem key={item} disablePadding>
-                <ListItemButton onClick={() => setOpen(false)}>
+                <ListItemButton
+                  onClick={() => {
+                    handleScroll(item)
+                    setOpen(false)
+                  }}
+                >
                   <ListItemText primary={item} />
                 </ListItemButton>
               </ListItem>
