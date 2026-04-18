@@ -58,12 +58,16 @@ const Home = () => (
             "telephone": "07440448919",
             "areaServed": [
               "Burton on Trent",
-              "Stafforshire",
+              "Staffordshire",
               "Derby",
-              "Burton",
-              "Birmingham"
+              "Swadlincote",
+              "Lichfield",
+              "Ashby-de-la-Zouch",
+              "Tamworth"
             ],
             "serviceType": [
+              "Roofer",
+              "Local roofers",
               "Roof Repairs",
               "Roof Installations",
               "Roof Inspections",
@@ -80,7 +84,7 @@ const Home = () => (
     <Hero />
     <Services />
     <AboutUs />
-    <Reviews />
+    {/* <Reviews /> */}
     <Contact />
     <Footer />
   </>
