@@ -34,11 +34,11 @@ const Hero = () => {
               zIndex: 2,
             }}
           >
-            <Typography variant="h2" fontWeight="bold" gutterBottom>
+            <Typography variant="h1" fontWeight="bold" gutterBottom>
               Natural Flow Roofing Systems
             </Typography>
 
-            <Typography variant="h6" sx={{ maxWidth: 600, mx: "auto", mb: 4 }}>
+            <Typography variant="h5" sx={{ maxWidth: 600, mx: "auto", mb: 4 }}>
               Reliable Roofing. Expert Craftsmanship. Lasting Protection.  
               Your home deserves a roof built to withstand anything. We deliver quality you can trust.
             </Typography>
