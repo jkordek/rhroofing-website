@@ -9,6 +9,7 @@ const AboutUs = () => {
   return (
     <>
       <section id="Company">
+        <Container sx={{ bgcolor: "#D9A842", height: "5px" }} maxWidth="false"/>
         <Box
           sx={{
             display: "flex",
@@ -100,7 +101,6 @@ const AboutUs = () => {
             />
           </Box>
         </Box>
-        <Container sx={{ bgcolor: "#D9A842", height: "5px" }} maxWidth="false"/>
       </section>
     </>
   );

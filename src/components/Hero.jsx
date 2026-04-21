@@ -6,6 +6,7 @@ const Hero = () => {
   return (
     <>
       <section id="Home">
+        <Container sx={{ bgcolor: "#D9A842", height: "5px" }} maxWidth="false"/>
         <Box
           sx={{
             position: "relative",
@@ -58,7 +59,6 @@ const Hero = () => {
             </Button>
           </Container>
         </Box>
-        <Container sx={{ bgcolor: "#D9A842", height: "5px" }} maxWidth="false"/>
       </section>
     </>
   );

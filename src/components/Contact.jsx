@@ -1,104 +1,105 @@
 import React from "react";
-import { Box, Container, Grid, Paper, Typography } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Stack,
+  Container,
+  Paper,
+} from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const Contact = () => {
+  const cards = [
+    {
+      icon: <PhoneIcon sx={{ fontSize: 40, color: "#D9A842" }} />,
+      title: "Call Us",
+      content: (
+        <>
+          07440 448919 <br />
+          07404 047918 <br />
+          Available 7 days a week
+        </>
+      ),
+    },
+    {
+      icon: <EmailIcon sx={{ fontSize: 40, color: "#D9A842" }} />,
+      title: "Email Us",
+      content: "naturalflowroofingsystems@gmail.com",
+    },
+    {
+      icon: <LocationOnIcon sx={{ fontSize: 40, color: "#D9A842" }} />,
+      title: "Where we operate",
+      content:
+        "We are based in Burton on Trent, Staffordshire but it's not a problem for us to come wherever you need us to.",
+    },
+  ];
+
   return (
-    <>  
-      <section id="Contact">
+    <section id="Contact">
+      <Container sx={{ bgcolor: "#D9A842", height: "5px" }} maxWidth={false} />
+
+      <Container maxWidth="lg">
         <Box
           sx={{
             py: 10,
-            px: 2,
-            maxWidth: "1200px",
-            mx: "auto",
             color: "#fff",
             textAlign: "center",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
           }}
         >
-          {/* Title */}
           <Typography variant="h4" fontWeight="bold" gutterBottom>
             Get in Touch
           </Typography>
 
-          {/* Contact Boxes */}
-          <Box sx={{ width: "100%", overflow: "hidden" }}>
-            <Grid
-              container
-              spacing={3}
-              sx={{
-                mt: 6,
-                mx: 0,
-                width: "100%",    
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              {/* Phone */}
-              <Grid item xs={12} md={6}>
+          {/* Cards */}
+          <Stack
+            direction={{ xs: "column", md: "row" }}
+            spacing={3}
+            sx={{
+              mt: 6,
+              alignItems: "stretch",
+            }}
+          >
+            {cards.map((card, i) => (
+              <Box key={i} sx={{ flex: 1, display: "flex" }}>
                 <Paper
                   elevation={3}
                   sx={{
                     p: 4,
-                    height: "100%",
+                    flex: 1,
                     display: "flex",
                     flexDirection: "column",
+                    justifyContent: "space-between",
                     alignItems: "center",
+                    textAlign: "center",
                     gap: 2,
                     bgcolor: "#2B2B2B",
                     color: "#fff",
                   }}
                 >
-                  <PhoneIcon sx={{ fontSize: 40, color: "#D9A842" }} />
-                  <Typography variant="h6" fontWeight="bold">
-                    Call Us
-                  </Typography>
-                  <Typography variant="body1" color="text.secondary">
-                    07440 448919 
-                    <br />
-                    07404 047918
-                    <br />
-                    Available 7 days a week
-                  </Typography>
-                </Paper>
-              </Grid>
+                  {card.icon}
 
-              {/* Email */}
-              <Grid item xs={12} md={6}>
-                <Paper
-                  elevation={3}
-                  sx={{
-                    p: 4,
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    gap: 2,
-                    bgcolor: "#2B2B2B",
-                    color: "#fff",
-                  }}
-                >
-                  <EmailIcon sx={{ fontSize: 40, color: "#D9A842" }} />
                   <Typography variant="h6" fontWeight="bold">
-                    Email Us
+                    {card.title}
                   </Typography>
-                  <Typography variant="body1" color="text.secondary">
-                    naturalflowroofingsystems@gmail.com
+
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      color: "#E5E7EB",
+                      wordBreak: "break-word",
+                    }}
+                  >
+                    {card.content}
                   </Typography>
                 </Paper>
-              </Grid>
-            </Grid>
-          </Box>
+              </Box>
+            ))}
+          </Stack>
         </Box>
-        <Container sx={{ bgcolor: "#D9A842", height: "5px" }} maxWidth="false"/>
-      </section>
-    </>
+      </Container>
+    </section>
   );
 };
 

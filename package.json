@@ -8,11 +8,11 @@
   },
   "license": "UNLICENSED",
   "author": "Jakub Kordek",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "postbuild": "node prerender.js"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -20,12 +20,17 @@
     "@fontsource/roboto": "^5.2.10",
     "@mui/icons-material": "^9.0.0",
     "@mui/material": "^9.0.0",
+    "express": "^5.2.1",
+    "puppeteer": "^24.42.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-helmet": "^6.1.0",
     "react-helmet-async": "^3.0.0",
-    "react-router": "^7.14.1",
-    "vite-plugin-image-optimizer": "^2.0.3"
+    "react-router-dom": "^7.14.2",
+    "serve": "^14.2.6",
+    "vite-plugin-image-optimizer": "^2.0.3",
+    "vite-plugin-prerender": "^1.0.8",
+    "vite-ssg": "^28.3.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.1",
