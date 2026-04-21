@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
-  Typography,
   Button,
   Box,
   IconButton,
@@ -14,25 +13,32 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../images/logo.svg";
 
 const Navbar = () => {
-  const menuItems = ["Home", "Services", "Company", "Contact"];
+  const navigate = useNavigate();
+
+  const menuItems = [
+    { label: "Home", path: "/" },
+    { label: "Services", path: "/services" },
+    { label: "Company", path: "/about" },
+    { label: "Contact", path: "/contact" },
+  ];
+
   const isMobile = useMediaQuery("(max-width: 768px)");
   const [open, setOpen] = useState(false);
 
-  const handleScroll = (section) => {
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleNavigate = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0); // ensures top of page
   };
 
   return (
     <>
       <AppBar sx={{ bgcolor: "#2B2B2B" }} position="sticky" elevation={4}>
         <Toolbar sx={{ display: "flex", alignItems: "center" }}>
-          
+
           {/* Left - Logo */}
           <Box sx={{ flex: 1, display: "flex", alignItems: "center" }}>
             <Box
@@ -44,6 +50,7 @@ const Navbar = () => {
                 width: "auto",
                 cursor: "pointer",
               }}
+              onClick={() => handleNavigate("/")}
             />
           </Box>
 
@@ -58,8 +65,13 @@ const Navbar = () => {
               }}
             >
               {menuItems.map((item) => (
-                <Button sx={{ color: "#E5E7EB" }} key={item} onClick={() => handleScroll(item)}>
-                  {item}
+                <Button
+                  component={Link}
+                  to={item.path}
+                  sx={{ color: "#E5E7EB" }}
+                  key={item.label}
+                >
+                  {item.label}
                 </Button>
               ))}
             </Box>
@@ -79,22 +91,18 @@ const Navbar = () => {
         </Toolbar>
       </AppBar>
 
-      {/* Gold bar under navbar */}
-      <Box sx={{ bgcolor: "#D9A842", height: "5px", width: "100%" }} />
-
       {/* Mobile Drawer */}
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
         <Box sx={{ width: 250 }}>
           <List>
             {menuItems.map((item) => (
-              <ListItem key={item} disablePadding>
+              <ListItem key={item.label} disablePadding>
                 <ListItemButton
-                  onClick={() => {
-                    handleScroll(item)
-                    setOpen(false)
-                  }}
+                  component={Link}
+                  to={item.path}
+                  onClick={() => setOpen(false)}
                 >
-                  <ListItemText primary={item} />
+                  <ListItemText primary={item.label} />
                 </ListItemButton>
               </ListItem>
             ))}
