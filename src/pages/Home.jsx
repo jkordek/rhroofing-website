@@ -1,6 +1,7 @@
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 import AboutUs from "../components/AboutUs";
+import AreasSection from "../components/AreaSection";
 import Contact from "../components/Contact";
 import { Helmet } from "react-helmet-async";
 
@@ -78,6 +79,7 @@ export default function Home() {
 
       <Hero />
       <Services />
+      <AreasSection />
       <AboutUs />
       <Contact />
     </>
