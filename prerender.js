@@ -3,6 +3,12 @@ const puppeteer = require("puppeteer");
 const { JSDOM } = require("jsdom");
 
 const routes = ["/", "/services", "/about", "/contact"];
+const routeTitles = {
+  "/": "Roofers in Burton on Trent | Natural Flow Roofing Systems",
+  "/services": "Roofing Services in Staffordshire | Natural Flow Roofing Systems",
+  "/about": "Experienced Roofers in Burton on Trent | Natural Flow Roofing Systems",
+  "/contact": "Contact Roofing Company in Burton on Trent | Natural Flow Roofing Systems",
+};
 
 const PORT = 4173;
 const BASE_URL = `http://localhost:${PORT}`;
@@ -11,22 +17,44 @@ function deduplicateHead(html, route) {
   const dom = new JSDOM(html);
   const document = dom.window.document;
 
-  // Title: keep first
-  const titles = document.querySelectorAll("title");
-  titles.forEach((t, i) => { if (i > 0) t.remove(); });
-
-  // Canonical: keep the one matching the current route
-  const canonicals = document.querySelectorAll('link[rel="canonical"]');
-  if (canonicals.length > 1) {
-    canonicals.forEach((c) => {
-      const href = c.getAttribute("href") || "";
-      if (!href.endsWith(route === "/" ? ".co.uk/" : route)) c.remove();
+  const keepLast = (selector) => {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach((element, index) => {
+      if (index < elements.length - 1) element.remove();
     });
+  };
+
+  // Title: make sure the prerendered file has the route-specific value.
+  const titles = document.querySelectorAll("title");
+  if (titles.length === 0) {
+    const title = document.createElement("title");
+    title.textContent = routeTitles[route];
+    document.head.prepend(title);
+  } else {
+    titles[0].textContent = routeTitles[route];
+    titles.forEach((t, i) => { if (i > 0) t.remove(); });
   }
 
-  // Description: keep last (page-specific one comes after Layout's)
-  const descriptions = document.querySelectorAll('meta[name="description"]');
-  descriptions.forEach((d, i) => { if (i < descriptions.length - 1) d.remove(); });
+  // Canonical: keep the last matching route-specific value rendered by Helmet.
+  const canonicals = document.querySelectorAll('link[rel="canonical"]');
+  canonicals.forEach((canonical, index) => {
+    if (index < canonicals.length - 1) canonical.remove();
+  });
+
+  keepLast('meta[name="description"]');
+  keepLast('meta[property="og:type"]');
+  keepLast('meta[property="og:site_name"]');
+  keepLast('meta[property="og:title"]');
+  keepLast('meta[property="og:description"]');
+  keepLast('meta[property="og:url"]');
+  keepLast('meta[property="og:image"]');
+  keepLast('meta[property="og:image:alt"]');
+  keepLast('meta[property="og:locale"]');
+  keepLast('meta[name="twitter:card"]');
+  keepLast('meta[name="twitter:title"]');
+  keepLast('meta[name="twitter:description"]');
+  keepLast('meta[name="twitter:image"]');
+  keepLast('script[type="application/ld+json"]');
 
   return dom.serialize();
 }
