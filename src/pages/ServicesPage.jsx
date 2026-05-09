@@ -7,7 +7,7 @@ export default function ServicesPage() {
       <SEO
         title="Roofing Services in Staffordshire"
         description="Expert roofing services including roof repairs, new roof installation, roof inspections, emergency roofing, flat roofing, and gutter repairs across Staffordshire."
-        path="/services"
+        path="/services/"
         schema={{
           "@context": "https://schema.org",
           "@type": "Service",
