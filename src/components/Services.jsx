@@ -109,7 +109,7 @@ const Services = () => {
                 transform: "translateY(-50%)",
                 zIndex: 20,
                 bgcolor: "#D9A842",
-                color: "#03002e",
+                color: "#2B2B2B",
                 width: 44,
                 height: 44,
                 "&:hover": { bgcolor: "#e8b84b" },
@@ -151,7 +151,7 @@ const Services = () => {
                     <Paper
                       elevation={isCenter ? 8 : 2}
                       sx={{
-                        bgcolor: "#1a1840",
+                        bgcolor: "#2B2B2B",
                         color: "#fff",
                         borderBottom: "5px solid #D9A842",
                         borderRadius: 2,
