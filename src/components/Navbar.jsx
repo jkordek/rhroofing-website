@@ -21,9 +21,9 @@ const Navbar = () => {
 
   const menuItems = [
     { label: "Home", path: "/" },
-    { label: "Services", path: "/services" },
-    { label: "Company", path: "/about" },
-    { label: "Contact", path: "/contact" },
+    { label: "Services", path: "/services/" },
+    { label: "Company", path: "/about/" },
+    { label: "Contact", path: "/contact/" },
   ];
 
   const isMobile = useMediaQuery("(max-width: 768px)");
