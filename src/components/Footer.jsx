@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Stack, Link, Container } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -14,19 +15,19 @@ const Footer = () => {
           px: 2,
         }}
       >
-        {/* Future Links Section */}
         <Stack
-          direction="row"
-          spacing={3}
+          direction={{ xs: "column", sm: "row" }}
+          spacing={{ xs: 1, sm: 3 }}
           justifyContent="center"
+          alignItems="center"
           sx={{ mb: 2 }}
         >
-          {/* Add links here when ready */}
-          {/* Example:
-          <Link href="/privacy" underline="hover" color="#E5E7EB">
+          <Link component={RouterLink} to="/privacy-policy/" underline="hover" color="#E5E7EB">
             Privacy Policy
           </Link>
-          */}
+          <Link component={RouterLink} to="/cookie-policy/" underline="hover" color="#E5E7EB">
+            Cookie Policy
+          </Link>
         </Stack>
 
         {/* Copyright */}
