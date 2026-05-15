@@ -8,7 +8,7 @@ const facebookUrl = "https://www.facebook.com/profile.php?id=100077565369301";
 const Footer = () => {
   return (
     <>
-      <Container sx={{ bgcolor: "#D9A842", height: "5px" }} maxWidth="false"/>
+      <Container sx={{ bgcolor: "#D9A842", height: "5px" }} maxWidth={false} />
       <Box
         component="footer"
         sx={{
@@ -49,9 +49,8 @@ const Footer = () => {
           </IconButton>
         </Stack>
 
-        {/* Copyright */}
         <Typography variant="body2" align="center" sx={{ opacity: 0.8 }}>
-          © {new Date().getFullYear()} Natural Flow Roofing Systems. All rights reserved.
+          {"\u00A9"} {new Date().getFullYear()} Natural Flow Roofing Systems. All rights reserved.
         </Typography>
       </Box>
     </>

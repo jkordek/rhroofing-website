@@ -44,6 +44,7 @@ function deduplicateHead(html, route) {
   });
 
   keepLast('meta[name="description"]');
+  keepLast('meta[name="robots"]');
   keepLast('meta[property="og:type"]');
   keepLast('meta[property="og:site_name"]');
   keepLast('meta[property="og:title"]');
@@ -97,7 +98,7 @@ function deduplicateHead(html, route) {
     );
 
     const html = await page.content();
-    const cleanedHtml = deduplicateHead(html, route); // ✅ route passed in
+    const cleanedHtml = deduplicateHead(html, route);
 
     const filePath =
       route === "/"

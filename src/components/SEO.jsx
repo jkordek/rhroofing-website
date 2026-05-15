@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 
 const siteUrl = "https://naturalflowroofing.co.uk";
 const siteName = "Natural Flow Roofing Systems";
+const facebookUrl = "https://www.facebook.com/profile.php?id=100077565369301";
 const defaultDescription =
   "Natural Flow Roofing Systems provides professional roof repairs, installations, inspections, and emergency roofing across Burton on Trent, Staffordshire, and nearby areas.";
 const defaultImage = `${siteUrl}/preview.jpg`;
@@ -12,6 +13,7 @@ const businessSchema = {
   "@id": `${siteUrl}/#business`,
   name: siteName,
   url: siteUrl,
+  sameAs: [facebookUrl],
   image: defaultImage,
   logo: defaultImage,
   description: defaultDescription,
@@ -33,14 +35,53 @@ const businessSchema = {
     "Tamworth",
   ],
   priceRange: "$$",
-  serviceType: [
-    "Roof repairs",
-    "New roof installations",
-    "Roof inspections",
-    "Emergency roofing",
-    "Flat roofing",
-    "Gutter repairs",
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+447440448919",
+      contactType: "customer service",
+      areaServed: "GB",
+      availableLanguage: "en",
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "+447404047918",
+      contactType: "customer service",
+      areaServed: "GB",
+      availableLanguage: "en",
+    },
   ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Roofing services",
+    itemListElement: [
+      "Roof repairs",
+      "New roof installations",
+      "Roof inspections",
+      "Emergency roofing",
+      "Flat roofing",
+      "Leadwork",
+      "Soffits and fascias",
+    ].map((name) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name,
+      },
+    })),
+  },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  name: siteName,
+  url: siteUrl,
+  publisher: {
+    "@id": `${siteUrl}/#business`,
+  },
+  inLanguage: "en-GB",
 };
 
 export default function SEO({
@@ -54,12 +95,15 @@ export default function SEO({
     path === "/" ? "/" : `${path.replace(/\/$/, "")}/`;
   const canonicalUrl = `${siteUrl}${normalizedPath}`;
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
-  const structuredData = schema ? [businessSchema, schema] : [businessSchema];
+  const structuredData = schema
+    ? [websiteSchema, businessSchema, schema]
+    : [websiteSchema, businessSchema];
 
   return (
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
+      <meta name="robots" content="index, follow" />
       <link rel="canonical" href={canonicalUrl} />
 
       <meta property="og:type" content={type} />

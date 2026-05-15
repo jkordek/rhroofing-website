@@ -17,8 +17,14 @@ const Contact = () => {
       title: "Call Us",
       content: (
         <>
-          07440 448919 <br />
-          07404 047918 <br />
+          <Box component="a" href="tel:+447440448919" sx={{ color: "inherit", textDecoration: "none" }}>
+            07440 448919
+          </Box>
+          <br />
+          <Box component="a" href="tel:+447404047918" sx={{ color: "inherit", textDecoration: "none" }}>
+            07404 047918
+          </Box>
+          <br />
           Available 7 days a week
         </>
       ),
@@ -26,7 +32,15 @@ const Contact = () => {
     {
       icon: <EmailIcon sx={{ fontSize: 40, color: "#D9A842" }} />,
       title: "Email Us",
-      content: "naturalflowroofingsystems@gmail.com",
+      content: (
+        <Box
+          component="a"
+          href="mailto:naturalflowroofingsystems@gmail.com"
+          sx={{ color: "inherit", textDecoration: "none" }}
+        >
+          naturalflowroofingsystems@gmail.com
+        </Box>
+      ),
     },
     {
       icon: <LocationOnIcon sx={{ fontSize: 40, color: "#D9A842" }} />,
