@@ -2,14 +2,13 @@ import React from "react";
 import { Box, Typography, Stack, Container } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
-// Example image import
 import aboutImage from "../images/roofing5.jpg";
 
 const AboutUs = () => {
   return (
     <>
       <section id="Company">
-        <Container sx={{ bgcolor: "#D9A842", height: "5px" }} maxWidth="false"/>
+        <Container sx={{ bgcolor: "#D9A842", height: "5px" }} maxWidth={false} />
         <Box
           sx={{
             display: "flex",
@@ -23,13 +22,8 @@ const AboutUs = () => {
             color: "#fff",
           }}
         >
-          {/* LEFT SIDE */}
           <Box sx={{ flex: 1 }}>
-            <Typography
-              variant="h4"
-              fontWeight="bold"
-              gutterBottom
-            >
+            <Typography variant="h4" fontWeight="bold" gutterBottom>
               About Us
             </Typography>
 
@@ -37,11 +31,9 @@ const AboutUs = () => {
               variant="h5"
               fontWeight="600"
               gutterBottom
-              sx={{
-                color: "#D9A842"
-              }}
+              sx={{ color: "#D9A842" }}
             >
-              Over 25 Years of Experience
+              Durable Materials, Reliable Roofing Service
             </Typography>
 
             <Typography
@@ -49,13 +41,12 @@ const AboutUs = () => {
               color="text.secondary"
               sx={{ mb: 3, maxWidth: 500 }}
             >
-              We provide high‑quality roofing services backed by decades of
+              We provide high-quality roofing services backed by over 25 years of
               experience, professional craftsmanship, and a commitment to customer
               satisfaction. Our team ensures every project is completed with
               precision and care.
             </Typography>
 
-            {/* Bullet Points */}
             <Stack spacing={1.5}>
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                 <CheckCircleIcon sx={{ color: "#D9A842" }} />
@@ -67,7 +58,7 @@ const AboutUs = () => {
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                 <CheckCircleIcon sx={{ color: "#D9A842" }} />
                 <Typography variant="body1">
-                  High‑quality materials and long‑lasting workmanship
+                  High-quality materials and long-lasting workmanship
                 </Typography>
               </Box>
 
@@ -80,7 +71,6 @@ const AboutUs = () => {
             </Stack>
           </Box>
 
-          {/* RIGHT SIDE IMAGE */}
           <Box
             sx={{
               flex: 1,
@@ -91,7 +81,7 @@ const AboutUs = () => {
             <Box
               component="img"
               src={aboutImage}
-              alt="About us"
+              alt="Roofing work completed by Natural Flow Roofing Systems"
               sx={{
                 width: "100%",
                 maxWidth: 500,

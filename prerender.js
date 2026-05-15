@@ -2,12 +2,14 @@ const fs = require("fs");
 const puppeteer = require("puppeteer");
 const { JSDOM } = require("jsdom");
 
-const routes = ["/", "/services", "/about", "/contact"];
+const routes = ["/", "/services", "/about", "/contact", "/privacy-policy", "/cookie-policy"];
 const routeTitles = {
-  "/": "Roofers in Burton on Trent | Natural Flow Roofing Systems",
+  "/": "Reliable Roofing Services for Your Home in Burton on Trent | Natural Flow Roofing Systems",
   "/services": "Roofing Services in Staffordshire | Natural Flow Roofing Systems",
   "/about": "Experienced Roofers in Burton on Trent | Natural Flow Roofing Systems",
   "/contact": "Contact Roofing Company in Burton on Trent | Natural Flow Roofing Systems",
+  "/privacy-policy": "Privacy Policy | Natural Flow Roofing Systems",
+  "/cookie-policy": "Cookie Policy | Natural Flow Roofing Systems",
 };
 
 const PORT = 4173;

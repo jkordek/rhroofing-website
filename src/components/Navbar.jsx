@@ -13,8 +13,11 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import FacebookIcon from "@mui/icons-material/Facebook";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../images/logo.svg";
+
+const facebookUrl = "https://www.facebook.com/profile.php?id=100077565369301";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -79,8 +82,25 @@ const Navbar = () => {
 
           {/* Right */}
           <Box sx={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
+            {!isMobile && (
+              <IconButton
+                component="a"
+                href={facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Natural Flow Roofing Systems on Facebook"
+                sx={{
+                  color: "#E5E7EB",
+                  "&:hover": { color: "#D9A842" },
+                }}
+              >
+                <FacebookIcon />
+              </IconButton>
+            )}
+
             {isMobile && (
               <IconButton
+                aria-label="Open navigation menu"
                 sx={{ color: "#E5E7EB" }}
                 onClick={() => setOpen(true)}
               >
@@ -107,6 +127,22 @@ const Navbar = () => {
               </ListItem>
             ))}
           </List>
+
+          <Box sx={{ display: "flex", justifyContent: "center", pt: 1, pb: 2 }}>
+            <IconButton
+              component="a"
+              href={facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Natural Flow Roofing Systems on Facebook"
+              sx={{
+                color: "#2B2B2B",
+                "&:hover": { color: "#D9A842" },
+              }}
+            >
+              <FacebookIcon />
+            </IconButton>
+          </Box>
         </Box>
       </Drawer>
     </>

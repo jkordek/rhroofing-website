@@ -60,9 +60,9 @@ const Hero = () => {
               </Box>
             </Typography>
 
-            <Typography variant="h5" sx={{ maxWidth: 600, mx: "auto", mb: 4 }}>
-              Reliable Roofing. Expert Craftsmanship. Lasting Protection.  
-              Your home deserves a roof built to withstand anything. We deliver quality you can trust.
+            <Typography variant="h5" sx={{ maxWidth: 620, mx: "auto", mb: 4 }}>
+              Reliable roofing services for your home, with expert craftsmanship,
+              durable materials, and roof protection built to last.
             </Typography>
 
             <Button 
