@@ -4,7 +4,7 @@ const { JSDOM } = require("jsdom");
 
 const routes = ["/", "/services", "/about", "/contact", "/privacy-policy", "/cookie-policy"];
 const routeTitles = {
-  "/": "Roofers in Burton on Trent | Natural Flow Roofing Systems",
+  "/": "Reliable Roofing Services for Your Home in Burton on Trent | Natural Flow Roofing Systems",
   "/services": "Roofing Services in Staffordshire | Natural Flow Roofing Systems",
   "/about": "Experienced Roofers in Burton on Trent | Natural Flow Roofing Systems",
   "/contact": "Contact Roofing Company in Burton on Trent | Natural Flow Roofing Systems",
