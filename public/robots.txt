@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-LLMs: https://naturalflowroofing.co.uk/llms.txt
 Sitemap: https://naturalflowroofing.co.uk/sitemap.xml
