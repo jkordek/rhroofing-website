@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 import roofing1 from '../images/roofing1.jpeg';
 
 const Hero = () => {
@@ -66,6 +67,8 @@ const Hero = () => {
             </Typography>
 
             <Button 
+              component={Link}
+              to="/contact/"
               variant="contained" 
               size="large" 
               sx={{

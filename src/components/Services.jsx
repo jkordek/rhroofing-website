@@ -26,7 +26,7 @@ const services = [
     title: "Leadwork",
     image: service2,
     description:
-      "Detailed inspections to identify potential issues early and ensure your roof stays in top condition.",
+      "Professional leadwork for weatherproof joins, flashing, valleys, and roof details that need a durable finish.",
   },
   {
     title: "Flat Roofing",
@@ -164,6 +164,7 @@ const Services = () => {
                         component="img"
                         src={service.image}
                         alt={service.title}
+                        loading={isCenter ? "eager" : "lazy"}
                         sx={{
                           width: "100%",
                           height: slot.imgH,
