@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 import roofing1 from '../images/roofing1.jpeg';
 
 const Hero = () => {
@@ -35,16 +36,39 @@ const Hero = () => {
               zIndex: 2,
             }}
           >
-            <Typography variant="h1" fontWeight="bold" gutterBottom>
-              Natural Flow Roofing Systems
+            <Typography
+              variant="h1"
+              fontWeight="bold"
+              gutterBottom
+              sx={{
+                maxWidth: 900,
+                mx: "auto",
+                fontSize: { xs: "2.8rem", sm: "4rem", md: "5.5rem" },
+                lineHeight: 0.95,
+                letterSpacing: 0,
+                textShadow: "0 4px 18px rgba(0,0,0,0.55)",
+              }}
+            >
+              Natural Flow
+              <Box
+                component="span"
+                sx={{
+                  display: "block",
+                  color: "#D9A842",
+                }}
+              >
+                Roofing Systems
+              </Box>
             </Typography>
 
-            <Typography variant="h5" sx={{ maxWidth: 600, mx: "auto", mb: 4 }}>
-              Reliable Roofing. Expert Craftsmanship. Lasting Protection.  
-              Your home deserves a roof built to withstand anything. We deliver quality you can trust.
+            <Typography variant="h5" sx={{ maxWidth: 620, mx: "auto", mb: 4 }}>
+              Reliable roofing services for your home, with expert craftsmanship,
+              durable materials, and roof protection built to last.
             </Typography>
 
             <Button 
+              component={Link}
+              to="/contact/"
               variant="contained" 
               size="large" 
               sx={{
