@@ -1,7 +1,6 @@
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 import AboutUs from "../components/AboutUs";
-import AreasSection from "../components/AreaSection";
 import Contact from "../components/Contact";
 import SEO from "../components/SEO";
 
@@ -16,7 +15,6 @@ export default function Home() {
 
       <Hero />
       <Services />
-      <AreasSection />
       <AboutUs />
       <Contact />
     </>
