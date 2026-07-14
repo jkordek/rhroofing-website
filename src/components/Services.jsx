@@ -7,7 +7,7 @@ import service1 from "../images/roofing1.jpeg";
 import service2 from "../images/roofing2.jpeg";
 import service3 from "../images/roofing3.jpeg";
 import service4 from "../images/flat-roofing.jpeg";
-import service5 from "../images/roofing5.jpg";
+import service5 from "../images/soffits.jpeg";
 
 const services = [
   {
