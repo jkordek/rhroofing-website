@@ -1,4 +1,4 @@
-import Services from "../components/Services";
+import ServicesGrid from "../components/ServicesGrid";
 import SEO from "../components/SEO";
 
 export default function ServicesPage() {
@@ -26,7 +26,7 @@ export default function ServicesPage() {
         }}
       />
 
-      <Services />
+      <ServicesGrid />
     </>
   );
 }
