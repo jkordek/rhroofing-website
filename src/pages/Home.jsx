@@ -16,7 +16,7 @@ export default function Home() {
       <Hero />
       <Services />
       <AboutUs />
-      <Contact />
+      <Contact isPage={false}/>
     </>
   );
 }
