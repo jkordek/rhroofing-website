@@ -10,7 +10,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
-const Contact = () => {
+const Contact = ({isPage}) => {
   const cards = [
     {
       icon: <PhoneIcon sx={{ fontSize: 40, color: "#D9A842" }} />,
@@ -50,6 +50,8 @@ const Contact = () => {
     },
   ];
 
+  console.log(isPage)
+
   return (
     <section id="Contact">
       <Container sx={{ bgcolor: "#D9A842", height: "5px" }} maxWidth={false} />
@@ -62,10 +64,33 @@ const Contact = () => {
             textAlign: "center",
           }}
         >
-          <Typography variant="h4" fontWeight="bold" gutterBottom>
-            Get in Touch
-          </Typography>
-
+          {
+            isPage ?
+              <>
+                <Typography 
+                  variant="h1" 
+                  fontWeight="bold" 
+                  gutterBottom
+                  sx={{
+                    maxWidth: 900,
+                    mx: "auto",
+                    fontSize: { xs: "2.8rem", sm: "4rem", md: "5.5rem" },
+                    lineHeight: 0.95,
+                    letterSpacing: 0,
+                    textShadow: "0 4px 18px rgba(0,0,0,0.55)",
+                  }}
+                >
+                  Contact Us
+                </Typography>
+                <Typography variant="h4" fontWeight="600" gutterBottom sx={{ color: "#D9A842" }}>
+                  Get in touch today for reliable roofing solutions, honest advice, and a free no-obligation quote.
+                </Typography>
+              </>
+            :
+              <Typography variant="h4" fontWeight="bold" gutterBottom>
+                Get in Touch
+              </Typography>
+          }
           {/* Cards */}
           <Stack
             direction={{ xs: "column", md: "row" }}
