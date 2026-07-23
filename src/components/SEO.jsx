@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-const siteUrl = "https://naturalflowroofing.co.uk/";
+const siteUrl = "https://naturalflowroofing.co.uk";
 const siteName = "Natural Flow Roofing Systems";
 const facebookUrl = "https://www.facebook.com/profile.php?id=100077565369301";
 const defaultDescription =
