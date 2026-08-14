@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Box,
   Container,
@@ -6,85 +5,11 @@ import {
   Typography,
   Card,
   CardActionArea,
-  Button,
-  Fade,
 } from "@mui/material";
-import ServiceDetails from "./ServiceDetails";
-
-import service1 from "../images/roofing1.jpeg";
-import service2 from "../images/roofing2.jpeg";
-import service3 from "../images/roofing3.jpeg";
-import service4 from "../images/flat-roofing.jpeg";
-import service5 from "../images/soffits.jpeg";
-import service6 from "../images/gutter.jpg";
-
-const services = [
-  {
-    id: "flat",
-    title: "Flat Roofing",
-    image: service4,
-    description:
-      "Our flat roofing solutions are designed to provide long-lasting protection for homes and commercial properties.",
-    features: [
-      "High-quality materials",
-      "Weatherproof and leak-resistant",
-      "Residential & commercial",
-      "Long-lasting performance",
-    ],
-  },
-  {
-    id: "leadwork",
-    title: "Leadwork",
-    image: service2,
-    description:
-      "Professional leadwork for flashings, valleys and roofing details.",
-    features: [
-      "Traditional craftsmanship",
-      "Weatherproof joints",
-      "Durable finish",
-    ],
-  },
-  {
-    id: "repairs",
-    title: "Roof Repairs",
-    image: service1,
-    description:
-      "Fast and reliable roof repair services to keep your property protected.",
-    features: [
-      "Emergency call-outs",
-      "Leak detection",
-      "Tile replacement",
-    ],
-  },
-  {
-    id: "gutters",
-    title: "Guttering Services",
-    image: service6,
-    description:
-      "Installation and repair of gutters, downpipes and drainage systems.",
-    features: [
-      "uPVC systems",
-      "Repairs",
-      "Maintenance",
-    ],
-  },
-  {
-    id: "sofits",
-    title: "Soffit and Fascias",
-    image: service6,
-    description:
-      "Durable soffit and fascia repairs to protect your roofline, improve ventilation, and keep your home looking neat and weatherproof.",
-    features: [
-      "uPVC systems",
-      "Repairs",
-      "Maintenance",
-    ],
-  },
-];
+import { Link } from "react-router-dom";
+import { services } from "../data/services";
 
 export default function ServicesGrid() {
-  const [selected, setSelected] = useState(services[0]);
-
   return (
     <Box
       sx={{
@@ -108,6 +33,7 @@ export default function ServicesGrid() {
 
         <Typography
           variant="h2"
+          component="h1"
           sx={{
             textAlign: "center",
             color: "#fff",
@@ -127,59 +53,54 @@ export default function ServicesGrid() {
             mb: 6,
           }}
         >
-          We provide high-quality roofing solutions for homes and businesses.
+          We provide high-quality roofing solutions for homes and businesses
+          across Burton on Trent and Staffordshire. Explore each service
+          below for full details.
         </Typography>
 
         <Grid container spacing={3}>
           {services.map((service) => (
-            <Grid size={{ xs: 12, sm: 6, md: 3 }} key={service.id}>
-              {console.log(service.image)}
+            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={service.slug}>
               <Card
                 sx={{
-                  position: "relative",
-                  height: 260,
-                  overflow: "hidden",
+                  height: "100%",
                   borderRadius: 3,
-                  backgroundImage: `url(${service.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  border:
-                    selected.id === service.id
-                      ? "2px solid #d4a537"
-                      : "1px solid rgba(255,255,255,.1)",
+                  bgcolor: "#2f2f2f",
+                  border: "1px solid rgba(255,255,255,.1)",
                   transition: "all .3s ease",
-                  cursor: "pointer",
 
                   "&:hover": {
                     transform: "translateY(-6px)",
                     boxShadow: "0 15px 35px rgba(0,0,0,.4)",
-                  },
-
-                  "&::before": {
-                    content: '""',
-                    position: "absolute",
-                    inset: 0,
-                    background:
-                      "linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,.15))",
+                    borderColor: "#d4a537",
                   },
                 }}
               >
                 <CardActionArea
-                  onClick={() => setSelected(service)}
-                  sx={{
-                    height: "100%",
-                    position: "relative",
-                    zIndex: 2,
-                    display: "flex",
-                    alignItems: "flex-end",
-                  }}
+                  component={Link}
+                  to={`/services/${service.slug}/`}
+                  sx={{ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }}
                 >
+                  <Box
+                    component="img"
+                    src={service.image}
+                    alt={service.title}
+                    loading="lazy"
+                    sx={{
+                      width: "100%",
+                      height: 200,
+                      objectFit: "cover",
+                    }}
+                  />
+
                   <Box p={3}>
                     <Typography
                       variant="h5"
+                      component="h2"
                       sx={{
                         color: "#fff",
                         fontWeight: 600,
+                        mb: 1,
                       }}
                     >
                       {service.title}
@@ -187,8 +108,17 @@ export default function ServicesGrid() {
 
                     <Typography
                       sx={{
+                        color: "rgba(255,255,255,.7)",
+                        mb: 2,
+                      }}
+                    >
+                      {service.description}
+                    </Typography>
+
+                    <Typography
+                      sx={{
                         color: "#d4a537",
-                        mt: 1,
+                        fontWeight: 600,
                       }}
                     >
                       Learn more →
@@ -199,12 +129,6 @@ export default function ServicesGrid() {
             </Grid>
           ))}
         </Grid>
-
-        <Fade in timeout={300}>
-          <div>
-            <ServiceDetails service={selected} />
-          </div>
-        </Fade>
       </Container>
     </Box>
   );

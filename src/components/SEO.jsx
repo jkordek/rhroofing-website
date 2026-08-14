@@ -94,10 +94,9 @@ export default function SEO({
   const normalizedPath =
     path === "/" ? "/" : `${path.replace(/\/$/, "")}/`;
   const canonicalUrl = `${siteUrl}${normalizedPath}`;
-  console.log(canonicalUrl);
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const structuredData = schema
-    ? [websiteSchema, businessSchema, schema]
+    ? [websiteSchema, businessSchema, ...(Array.isArray(schema) ? schema : [schema])]
     : [websiteSchema, businessSchema];
 
   return (

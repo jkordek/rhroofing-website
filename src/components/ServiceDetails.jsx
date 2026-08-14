@@ -4,6 +4,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function ServiceDetails( {service} ) {
   return (
@@ -26,6 +27,7 @@ export default function ServiceDetails( {service} ) {
           >
             <Typography
               variant="h3"
+              component="h1"
               sx={{
                 color: "#fff",
                 mb: 3,
@@ -60,6 +62,8 @@ export default function ServiceDetails( {service} ) {
             </Box>
 
             <Button
+              component={Link}
+              to="/contact/"
               variant="contained"
               sx={{
                 mt: 3,
@@ -80,7 +84,7 @@ export default function ServiceDetails( {service} ) {
           <Box
             component="img"
             src={service.image}
-            alt={service.title}
+            alt={`${service.title} by Natural Flow Roofing Systems`}
             sx={{
               width: "100%",
               height: "100%",
