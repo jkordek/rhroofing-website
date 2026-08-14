@@ -17,6 +17,12 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "./main.css";
 
+// react-helmet-async's React 19 codepath renders its own title/meta/link/script
+// tags without checking for tags already in the document, so the prerendered
+// SEO tags (marked data-ssr by prerender.js) must be cleared before React
+// mounts, or Helmet's tags end up duplicated alongside them.
+document.head.querySelectorAll('[data-ssr="true"]').forEach((el) => el.remove());
+
 createRoot(document.getElementById("root")).render(
   <HelmetProvider>
     <BrowserRouter>
