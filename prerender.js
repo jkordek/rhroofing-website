@@ -2,10 +2,27 @@ const fs = require("fs");
 const puppeteer = require("puppeteer");
 const { JSDOM } = require("jsdom");
 
-const routes = ["/", "/services", "/about", "/contact", "/privacy-policy", "/cookie-policy"];
+const routes = [
+  "/",
+  "/services",
+  "/services/flat-roofing",
+  "/services/leadwork",
+  "/services/roof-repairs",
+  "/services/guttering-services",
+  "/services/soffits-and-fascias",
+  "/about",
+  "/contact",
+  "/privacy-policy",
+  "/cookie-policy",
+];
 const routeTitles = {
   "/": "Reliable Roofing Services for Your Home in Burton on Trent | Natural Flow Roofing Systems",
   "/services": "Roofing Services in Staffordshire | Natural Flow Roofing Systems",
+  "/services/flat-roofing": "Flat Roofing in Staffordshire | Natural Flow Roofing Systems",
+  "/services/leadwork": "Roof Leadwork in Staffordshire | Natural Flow Roofing Systems",
+  "/services/roof-repairs": "Roof Repairs in Staffordshire | Natural Flow Roofing Systems",
+  "/services/guttering-services": "Guttering Services in Staffordshire | Natural Flow Roofing Systems",
+  "/services/soffits-and-fascias": "Soffit and Fascia Installation in Staffordshire | Natural Flow Roofing Systems",
   "/about": "Experienced Roofers in Burton on Trent | Natural Flow Roofing Systems",
   "/contact": "Contact Roofing Company in Burton on Trent | Natural Flow Roofing Systems",
   "/privacy-policy": "Privacy Policy | Natural Flow Roofing Systems",

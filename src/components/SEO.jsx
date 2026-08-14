@@ -96,7 +96,7 @@ export default function SEO({
   const canonicalUrl = `${siteUrl}${normalizedPath}`;
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const structuredData = schema
-    ? [websiteSchema, businessSchema, schema]
+    ? [websiteSchema, businessSchema, ...(Array.isArray(schema) ? schema : [schema])]
     : [websiteSchema, businessSchema];
 
   return (
