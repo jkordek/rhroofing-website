@@ -36,10 +36,16 @@ function deduplicateHead(html, route) {
   const dom = new JSDOM(html);
   const document = dom.window.document;
 
+  // data-ssr marks tags baked into the static HTML so the client can remove
+  // them before React mounts — react-helmet-async's React 19 codepath renders
+  // its own title/meta/link/script tags without checking for or replacing
+  // tags already present in the document, so without this both sets end up
+  // in the DOM after hydration.
   const keepLast = (selector) => {
     const elements = document.querySelectorAll(selector);
     elements.forEach((element, index) => {
       if (index < elements.length - 1) element.remove();
+      else element.setAttribute("data-ssr", "true");
     });
   };
 
@@ -48,9 +54,11 @@ function deduplicateHead(html, route) {
   if (titles.length === 0) {
     const title = document.createElement("title");
     title.textContent = routeTitles[route];
+    title.setAttribute("data-ssr", "true");
     document.head.prepend(title);
   } else {
     titles[0].textContent = routeTitles[route];
+    titles[0].setAttribute("data-ssr", "true");
     titles.forEach((t, i) => { if (i > 0) t.remove(); });
   }
 
@@ -58,6 +66,7 @@ function deduplicateHead(html, route) {
   const canonicals = document.querySelectorAll('link[rel="canonical"]');
   canonicals.forEach((canonical, index) => {
     if (index < canonicals.length - 1) canonical.remove();
+    else canonical.setAttribute("data-ssr", "true");
   });
 
   keepLast('meta[name="description"]');
