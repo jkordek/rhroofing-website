@@ -10,7 +10,7 @@ export default function ContactPage() {
         path="/contact/"
       />
 
-      <Contact />
+      <Contact isPage={true}/>
     </>
   );
 }
