@@ -66,7 +66,11 @@ export default function PrivacyPolicyPage() {
 
       <Box component="main" sx={{ bgcolor: "#474646", color: "#fff", py: 8, px: 2 }}>
         <Container maxWidth="md">
-          <Typography variant="h3" component="h1" fontWeight="bold" gutterBottom>
+          <Typography
+            variant="h2"
+            component="h1"
+            sx={{ color: "#fff", fontWeight: 600, mb: 2, textAlign: "center" }}
+          >
             Privacy Policy
           </Typography>
           <Typography sx={{ color: "#E5E7EB", mb: 5 }}>

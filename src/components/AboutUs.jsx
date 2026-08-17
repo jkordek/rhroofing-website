@@ -4,7 +4,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 import aboutImage from "../images/roofing5.jpg";
 
-const AboutUs = () => {
+const AboutUs = ({ isPage = false }) => {
   return (
     <>
       <section id="Company">
@@ -23,9 +23,19 @@ const AboutUs = () => {
           }}
         >
           <Box sx={{ flex: 1 }}>
-            <Typography variant="h4" fontWeight="bold" gutterBottom>
-              About Us
-            </Typography>
+            {isPage ? (
+              <Typography
+                variant="h2"
+                component="h1"
+                sx={{ color: "#fff", fontWeight: 600, mb: 2, textAlign: "center" }}
+              >
+                About Us
+              </Typography>
+            ) : (
+              <Typography variant="h4" fontWeight="bold" gutterBottom>
+                About Us
+              </Typography>
+            )}
 
             <Typography
               variant="h5"
@@ -47,6 +57,29 @@ const AboutUs = () => {
               precision and care.
             </Typography>
 
+            <Typography
+              variant="body1"
+              color="text.secondary"
+              sx={{ mb: 3, maxWidth: 500 }}
+            >
+              Natural Flow Roofing Systems is based on Frederick Street in Burton
+              on Trent, and we've spent more than two decades looking after roofs
+              across Staffordshire and the surrounding DE15 area. In that time
+              we've built a reputation on doing the job properly — using materials
+              that hold up, pricing that's honest from the start, and workmanship
+              we're happy to stand behind.
+            </Typography>
+
+            <Typography
+              variant="body1"
+              color="text.secondary"
+              sx={{ mb: 3, maxWidth: 500 }}
+            >
+              Whether you need a small repair, a full re-roof, or advice on what
+              your roof actually needs (not just what's easiest to sell you), we
+              treat every property like it's our own.
+            </Typography>
+
             <Stack spacing={1.5}>
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                 <CheckCircleIcon sx={{ color: "#D9A842" }} />
@@ -66,6 +99,20 @@ const AboutUs = () => {
                 <CheckCircleIcon sx={{ color: "#D9A842" }} />
                 <Typography variant="body1">
                   Transparent pricing and reliable service
+                </Typography>
+              </Box>
+
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                <CheckCircleIcon sx={{ color: "#D9A842" }} />
+                <Typography variant="body1">
+                  Over 25 years of experience across Burton on Trent and Staffordshire
+                </Typography>
+              </Box>
+
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                <CheckCircleIcon sx={{ color: "#D9A842" }} />
+                <Typography variant="body1">
+                  Available 7 days a week
                 </Typography>
               </Box>
             </Stack>

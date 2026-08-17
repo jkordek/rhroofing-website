@@ -46,7 +46,7 @@ const Contact = ({isPage}) => {
       icon: <LocationOnIcon sx={{ fontSize: 40, color: "#D9A842" }} />,
       title: "Where we operate",
       content:
-        "We are based in Burton on Trent, Staffordshire but it's not a problem for us to come wherever you need us to.",
+        "We are based in Burton on Trent, Staffordshire but it's not a problem for us to come wherever you need us to. We regularly work across Burton on Trent, the DE15 area, and the wider Staffordshire region — get in touch to check we cover your postcode.",
     },
   ];
 
@@ -67,17 +67,14 @@ const Contact = ({isPage}) => {
           {
             isPage ?
               <>
-                <Typography 
-                  variant="h1" 
-                  fontWeight="bold" 
-                  gutterBottom
+                <Typography
+                  variant="h2"
+                  component="h1"
                   sx={{
-                    maxWidth: 900,
-                    mx: "auto",
-                    fontSize: { xs: "2.8rem", sm: "4rem", md: "5.5rem" },
-                    lineHeight: 0.95,
-                    letterSpacing: 0,
-                    textShadow: "0 4px 18px rgba(0,0,0,0.55)",
+                    color: "#fff",
+                    fontWeight: 600,
+                    mb: 2,
+                    textAlign: "center",
                   }}
                 >
                   Contact Us
@@ -109,7 +106,7 @@ const Contact = ({isPage}) => {
                     flex: 1,
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "space-between",
+                    justifyContent: "flex-start",
                     alignItems: "center",
                     textAlign: "center",
                     gap: 2,

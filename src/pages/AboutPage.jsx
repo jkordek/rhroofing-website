@@ -10,7 +10,7 @@ export default function AboutPage() {
         path="/about/"
       />
 
-      <AboutUs />
+      <AboutUs isPage />
     </>
   );
 }

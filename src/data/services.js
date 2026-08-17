@@ -1,6 +1,7 @@
 import flatRoofingImage from "../images/flat-roofing.jpeg";
 import leadworkImage from "../images/roofing2.jpeg";
 import roofRepairsImage from "../images/roofing1.jpeg";
+import newRoofImage from "../images/newRoof.jpeg";
 import gutteringImage from "../images/gutter.jpg";
 import soffitsImage from "../images/soffits.jpeg";
 
@@ -10,12 +11,12 @@ export const services = [
     title: "Flat Roofing",
     image: flatRoofingImage,
     description:
-      "Our flat roofing solutions are designed to provide long-lasting protection for homes and commercial properties.",
+      "Flat roofs take a lot of punishment — standing water, UV exposure, and temperature swings all shorten their lifespan if they're not installed or maintained properly. We install and repair flat roofs for homes and commercial properties using durable, weatherproof materials, including GRP fibreglass and felt systems, matched to your property and budget.",
     features: [
-      "High-quality materials",
-      "Weatherproof and leak-resistant",
-      "Residential & commercial",
-      "Long-lasting performance",
+      "New flat roof installation",
+      "Flat roof repairs and leak fixes",
+      "Recovering and overlaying worn flat roofs",
+      "Inspections to catch problems before they spread",
     ],
     seoTitle: "Flat Roofing in Staffordshire",
     seoDescription:
@@ -26,11 +27,12 @@ export const services = [
     title: "Leadwork",
     image: leadworkImage,
     description:
-      "Professional leadwork for flashings, valleys and roofing details.",
+      "Lead is still one of the most reliable materials for weatherproofing the trickiest parts of a roof — valleys, chimneys, flashings, and abutments where two roof surfaces meet. Poor leadwork is one of the most common hidden causes of leaks, so we take the time to get every joint and detail right.",
     features: [
-      "Traditional craftsmanship",
-      "Weatherproof joints",
-      "Durable finish",
+      "Flashing installation and repair",
+      "Valley and abutment leadwork",
+      "Chimney leadwork",
+      "Leak repairs caused by failed or ageing leadwork",
     ],
     seoTitle: "Roof Leadwork in Staffordshire",
     seoDescription:
@@ -41,15 +43,32 @@ export const services = [
     title: "Roof Repairs",
     image: roofRepairsImage,
     description:
-      "Fast and reliable roof repair services to keep your property protected.",
+      "Not every roofing problem needs a full replacement. Our repair service covers everything from a single slipped or cracked tile to storm damage, chimney flashing failures, and persistent leaks. We inspect the roof properly first, so you're paying to fix the actual cause rather than just patching the symptom.",
     features: [
-      "Emergency call-outs",
-      "Leak detection",
-      "Tile replacement",
+      "Leak detection and repair",
+      "Damaged, slipped, or missing tile replacement",
+      "Storm and weather damage repairs",
+      "Chimney and flashing repairs",
     ],
     seoTitle: "Roof Repairs in Staffordshire",
     seoDescription:
       "Fast, reliable roof repairs including emergency call-outs, leak detection and tile replacement across Burton on Trent and Staffordshire.",
+  },
+  {
+    slug: "new-roof-installation",
+    title: "New Roof Installation",
+    image: newRoofImage,
+    description:
+      "When a roof is beyond economical repair, or you're renovating and need a fresh start, we handle full roof installations from start to finish. That includes stripping the old roof, checking and repairing the structure underneath where needed, and fitting a new roof using durable materials designed to last for decades.",
+    features: [
+      "Full roof strip and replacement",
+      "Tiled, slate, and flat roof installations",
+      "Structural timber checks and repairs",
+      "Clear, itemised quotes before work begins",
+    ],
+    seoTitle: "New Roof Installation in Staffordshire",
+    seoDescription:
+      "Full roof installations from strip-out to finish, using durable materials designed to last for decades, across Burton on Trent and Staffordshire.",
   },
   {
     slug: "guttering-services",
@@ -71,11 +90,12 @@ export const services = [
     title: "Soffit and Fascias",
     image: soffitsImage,
     description:
-      "Durable soffit and fascia repairs to protect your roofline, improve ventilation, and keep your home looking neat and weatherproof.",
+      "Your soffits and fascias do more than tidy up the edge of your roof — they protect the roof timbers underneath from water damage and keep pests out, while allowing your roof space to ventilate properly. When they crack, rot, or come away from the roofline, moisture gets in fast.",
     features: [
-      "uPVC systems",
-      "Repairs",
-      "Maintenance",
+      "Replacement of damaged or rotten soffits and fascias",
+      "Low-maintenance uPVC options in a range of finishes",
+      "Guttering repair and replacement alongside soffit and fascia work",
+      "Ventilation checks to prevent damp and condensation issues",
     ],
     seoTitle: "Soffit and Fascia Installation in Staffordshire",
     seoDescription:
