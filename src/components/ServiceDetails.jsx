@@ -26,12 +26,13 @@ export default function ServiceDetails( {service} ) {
             }}
           >
             <Typography
-              variant="h3"
+              variant="h2"
               component="h1"
               sx={{
                 color: "#fff",
-                mb: 3,
                 fontWeight: 600,
+                mb: 2,
+                textAlign: "center",
               }}
             >
               {service.title}

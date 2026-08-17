@@ -37,16 +37,13 @@ const Hero = () => {
             }}
           >
             <Typography
-              variant="h1"
-              fontWeight="bold"
-              gutterBottom
+              variant="h2"
+              component="h1"
               sx={{
-                maxWidth: 900,
-                mx: "auto",
-                fontSize: { xs: "2.8rem", sm: "4rem", md: "5.5rem" },
-                lineHeight: 0.95,
-                letterSpacing: 0,
-                textShadow: "0 4px 18px rgba(0,0,0,0.55)",
+                color: "#fff",
+                fontWeight: 600,
+                mb: 2,
+                textAlign: "center",
               }}
             >
               Natural Flow
