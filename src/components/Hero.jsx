@@ -58,7 +58,7 @@ const Hero = () => {
               </Box>
             </Typography>
 
-            <Typography variant="h5" sx={{ maxWidth: 620, mx: "auto", mb: 4 }}>
+            <Typography variant="h5" component="p" sx={{ maxWidth: 620, mx: "auto", mb: 4 }}>
               Reliable roofing services for your home, with expert craftsmanship,
               durable materials, and roof protection built to last.
             </Typography>

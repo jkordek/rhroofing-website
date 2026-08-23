@@ -32,7 +32,7 @@ const FAQ = ({ isPage = false }) => {
               Frequently Asked Questions
             </Typography>
           ) : (
-            <Typography variant="h4" fontWeight="bold" gutterBottom>
+            <Typography variant="h4" component="h2" fontWeight="bold" gutterBottom>
               Frequently Asked Questions
             </Typography>
           )}
@@ -70,7 +70,7 @@ const FAQ = ({ isPage = false }) => {
                   expandIcon={<ExpandMoreIcon sx={{ color: "#D9A842" }} />}
                   sx={{ px: 3 }}
                 >
-                  <Typography variant="h6" sx={{ fontSize: "1.05rem", fontWeight: 600 }}>
+                  <Typography variant="h6" component={isPage ? "h2" : "h3"} sx={{ fontSize: "1.05rem", fontWeight: 600 }}>
                     {faq.question}
                   </Typography>
                 </AccordionSummary>

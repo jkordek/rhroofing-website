@@ -176,6 +176,7 @@ export default function ServicesGrid() {
         >
           <Typography
             variant="h4"
+            component="h2"
             sx={{ color: "#fff", fontWeight: 600, mb: 4 }}
           >
             Why Choose Natural Flow Roofing Systems

@@ -66,7 +66,7 @@ export const services = [
       "Structural timber checks and repairs",
       "Clear, itemised quotes before work begins",
     ],
-    seoTitle: "New Roof Installation in Staffordshire",
+    seoTitle: "New Roof Installation Staffordshire",
     seoDescription:
       "Full roof installations from strip-out to finish, using durable materials designed to last for decades, across Burton on Trent and Staffordshire.",
   },
@@ -98,7 +98,7 @@ export const services = [
       "Guttering repair and replacement alongside soffit and fascia work",
       "Ventilation checks to prevent damp and condensation issues",
     ],
-    seoTitle: "Soffit and Fascia Installation in Staffordshire",
+    seoTitle: "Soffits and Fascias in Staffordshire",
     seoDescription:
       "Durable soffit and fascia installation and repairs to protect your roofline and improve ventilation across Staffordshire.",
   },

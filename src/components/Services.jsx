@@ -91,6 +91,7 @@ const Services = () => {
         >
           <Typography
             variant="h4"
+            component="h2"
             fontWeight="bold"
             gutterBottom
             sx={{ mb: "0.70rem" }}
@@ -182,7 +183,7 @@ const Services = () => {
                           minHeight: 0,
                         }}
                       >
-                        <Typography variant="h6" fontWeight="bold" gutterBottom>
+                        <Typography variant="h6" component="h3" fontWeight="bold" gutterBottom>
                           {service.title}
                         </Typography>
                         <Typography
