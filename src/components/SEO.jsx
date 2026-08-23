@@ -2,9 +2,10 @@ import { Helmet } from "react-helmet-async";
 
 const siteUrl = "https://naturalflowroofing.co.uk";
 const siteName = "Natural Flow Roofing Systems";
+const titleBrand = "Natural Flow Roofing";
 const facebookUrl = "https://www.facebook.com/profile.php?id=100077565369301";
 const defaultDescription =
-  "Natural Flow Roofing Systems provides professional roof repairs, installations, inspections, and emergency roofing across Burton on Trent, Staffordshire, and nearby areas.";
+  "Natural Flow Roofing Systems provides professional roof repairs, installations, inspections, and emergency roofing across Burton on Trent and Staffordshire.";
 const defaultImage = `${siteUrl}/preview.jpg`;
 
 const businessSchema = {
@@ -94,7 +95,7 @@ export default function SEO({
   const normalizedPath =
     path === "/" ? "/" : `${path.replace(/\/$/, "")}/`;
   const canonicalUrl = `${siteUrl}${normalizedPath}`;
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullTitle = title.includes(titleBrand) ? title : `${title} | ${titleBrand}`;
   const structuredData = schema
     ? [websiteSchema, businessSchema, ...(Array.isArray(schema) ? schema : [schema])]
     : [websiteSchema, businessSchema];

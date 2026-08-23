@@ -57,7 +57,7 @@ const ServiceAreas = ({ isPage = false }) => {
               Areas We Cover
             </Typography>
           ) : (
-            <Typography variant="h4" fontWeight="bold" gutterBottom>
+            <Typography variant="h4" component="h2" fontWeight="bold" gutterBottom>
               Areas We Cover
             </Typography>
           )}
@@ -96,7 +96,7 @@ const ServiceAreas = ({ isPage = false }) => {
                   }}
                 >
                   <LocationOnIcon sx={{ fontSize: 32, color: "#D9A842" }} />
-                  <Typography variant="h6" fontWeight="bold">
+                  <Typography variant="h6" component={isPage ? "h2" : "h3"} fontWeight="bold">
                     {area.name}
                   </Typography>
                   <Typography

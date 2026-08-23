@@ -17,18 +17,18 @@ const routes = [
   "/cookie-policy",
 ];
 const routeTitles = {
-  "/": "Reliable Roofing Services for Your Home in Burton on Trent | Natural Flow Roofing Systems",
-  "/services": "Roofing Services in Staffordshire | Natural Flow Roofing Systems",
-  "/services/flat-roofing": "Flat Roofing in Staffordshire | Natural Flow Roofing Systems",
-  "/services/leadwork": "Roof Leadwork in Staffordshire | Natural Flow Roofing Systems",
-  "/services/roof-repairs": "Roof Repairs in Staffordshire | Natural Flow Roofing Systems",
-  "/services/new-roof-installation": "New Roof Installation in Staffordshire | Natural Flow Roofing Systems",
-  "/services/guttering-services": "Guttering Services in Staffordshire | Natural Flow Roofing Systems",
-  "/services/soffits-and-fascias": "Soffit and Fascia Installation in Staffordshire | Natural Flow Roofing Systems",
-  "/about": "Experienced Roofers in Burton on Trent | Natural Flow Roofing Systems",
-  "/contact": "Contact Roofing Company in Burton on Trent | Natural Flow Roofing Systems",
-  "/privacy-policy": "Privacy Policy | Natural Flow Roofing Systems",
-  "/cookie-policy": "Cookie Policy | Natural Flow Roofing Systems",
+  "/": "Roofing Services in Burton on Trent | Natural Flow Roofing",
+  "/services": "Roofing Services in Staffordshire | Natural Flow Roofing",
+  "/services/flat-roofing": "Flat Roofing in Staffordshire | Natural Flow Roofing",
+  "/services/leadwork": "Roof Leadwork in Staffordshire | Natural Flow Roofing",
+  "/services/roof-repairs": "Roof Repairs in Staffordshire | Natural Flow Roofing",
+  "/services/new-roof-installation": "New Roof Installation Staffordshire | Natural Flow Roofing",
+  "/services/guttering-services": "Guttering Services in Staffordshire | Natural Flow Roofing",
+  "/services/soffits-and-fascias": "Soffits and Fascias in Staffordshire | Natural Flow Roofing",
+  "/about": "Roofing Experts in Burton on Trent | Natural Flow Roofing",
+  "/contact": "Contact Us - Burton on Trent Roofers | Natural Flow Roofing",
+  "/privacy-policy": "Privacy Policy | Natural Flow Roofing",
+  "/cookie-policy": "Cookie Policy | Natural Flow Roofing",
 };
 
 const PORT = 4173;

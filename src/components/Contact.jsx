@@ -50,8 +50,6 @@ const Contact = ({isPage}) => {
     },
   ];
 
-  console.log(isPage)
-
   return (
     <section id="Contact">
       <Container sx={{ bgcolor: "#D9A842", height: "5px" }} maxWidth={false} />
@@ -79,12 +77,12 @@ const Contact = ({isPage}) => {
                 >
                   Contact Us
                 </Typography>
-                <Typography variant="h4" fontWeight="600" gutterBottom sx={{ color: "#D9A842" }}>
+                <Typography variant="h4" component="p" fontWeight="600" gutterBottom sx={{ color: "#D9A842" }}>
                   Get in touch today for reliable roofing solutions, honest advice, and a free no-obligation quote.
                 </Typography>
               </>
             :
-              <Typography variant="h4" fontWeight="bold" gutterBottom>
+              <Typography variant="h4" component="h2" fontWeight="bold" gutterBottom>
                 Get in Touch
               </Typography>
           }
@@ -116,7 +114,7 @@ const Contact = ({isPage}) => {
                 >
                   {card.icon}
 
-                  <Typography variant="h6" fontWeight="bold">
+                  <Typography variant="h6" component={isPage ? "h2" : "h3"} fontWeight="bold">
                     {card.title}
                   </Typography>
 

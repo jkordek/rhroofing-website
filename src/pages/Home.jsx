@@ -24,8 +24,8 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Reliable Roofing Services for Your Home in Burton on Trent"
-        description="Natural Flow Roofing Systems provides reliable roofing services, roof repairs, installations, inspections, and durable materials for homes across Burton on Trent and Staffordshire."
+        title="Roofing Services in Burton on Trent"
+        description="Natural Flow Roofing Systems offers reliable roof repairs, installations, and inspections for homes across Burton on Trent and Staffordshire."
         path="/"
         schema={faqSchema}
       />

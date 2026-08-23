@@ -32,13 +32,14 @@ const AboutUs = ({ isPage = false }) => {
                 About Us
               </Typography>
             ) : (
-              <Typography variant="h4" fontWeight="bold" gutterBottom>
+              <Typography variant="h4" component="h2" fontWeight="bold" gutterBottom>
                 About Us
               </Typography>
             )}
 
             <Typography
               variant="h5"
+              component={isPage ? "h2" : "h3"}
               fontWeight="600"
               gutterBottom
               sx={{ color: "#D9A842" }}
