@@ -75,15 +75,16 @@ export const services = [
     title: "Guttering Services",
     image: gutteringImage,
     description:
-      "Installation and repair of gutters, downpipes and drainage systems.",
+      "Your guttering is your roof's drainage system, and when it's blocked, sagging, or leaking, water ends up running down your walls, pooling near your foundations, or forcing its way into your fascias and soffits. We install and repair uPVC guttering and downpipe systems, replacing worn or damaged sections and correcting poor falls that stop water draining away properly.",
     features: [
-      "uPVC systems",
-      "Repairs",
-      "Maintenance",
+      "New gutter and downpipe installation",
+      "Repairs to leaking, sagging, or blocked gutters",
+      "Replacement and upgrades to durable uPVC systems",
+      "Ongoing maintenance to prevent overflow and water damage",
     ],
     seoTitle: "Guttering Services in Staffordshire",
     seoDescription:
-      "Installation, repair and maintenance of uPVC gutters, downpipes and drainage systems across Staffordshire.",
+      "Guttering installation, repairs and maintenance to keep water draining away from your roof, walls and foundations across Burton on Trent and Staffordshire.",
   },
   {
     slug: "soffits-and-fascias",
